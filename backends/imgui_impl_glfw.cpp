@@ -870,6 +870,8 @@ static void ImGui_ImplGlfw_SwapBuffers(ImGuiViewport* viewport, void*)
 // IME (Input Method Editor) basic support for e.g. Asian language users
 //--------------------------------------------------------------------------------------------------------
 
+#define IMGUI_DISABLE_WIN32_DEFAULT_IME_FUNCTIONS
+
 // We provide a Win32 implementation because this is such a common issue for IME users
 #if defined(_WIN32) && !defined(IMGUI_DISABLE_WIN32_FUNCTIONS) && !defined(IMGUI_DISABLE_WIN32_DEFAULT_IME_FUNCTIONS)
 #define HAS_WIN32_IME   1
